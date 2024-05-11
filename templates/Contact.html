@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/Contact.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style type="text/css">
+    body { 
+      background-image: url("static/Images/Front.jpg"); 
+      background-size: cover; 
+    } 
+    </style>
+
+<body>
+    <nav class="navbar navbara navbar-dark navbar-static-top">
+        <div class="container-fluid head-container">
+            <span class="navbar-brand mb-3 h1 head-title mx-3 nav-head" style="color: black;">Crop Prediction</span>
+            <ul>
+                <a class="head-item1" href="{{url_for('Landing')}}">Home</a>
+                <a class="head-item1" href="{{url_for('About_Data')}}">Explore Data</a>
+                <a class="head-item1" href="{{url_for('Form')}}">Predict Crop</a>
+                <!-- < class="head-item1" href="####">Features</ -->
+                <a class="head-item1" href="{{url_for('Contact')}}">Contact Us</a>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title">Details</div>
+        <div class="content">
+            <form action="####" method="post">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" name="name" placeholder="Enter Full Name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone No.</span>
+                        <input type="phone" name="phone" placeholder="Enter Phone No." required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Address</span>
+                        <input type="text" name="address" placeholder="Enter Address" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email ID</span>
+                        <input type="email" name="email" placeholder="Enter Email ID" required>
+                    </div>
+
+                </div>
+
+                <button class="button" type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

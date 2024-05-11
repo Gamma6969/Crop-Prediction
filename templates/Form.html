@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style/Predict.css') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<style type="text/css">
+    body { 
+      background-image: url("static/Images/Front.jpg"); 
+      background-size: cover; 
+    } 
+    </style>
+
+<body>
+    <nav class="navbar navbara navbar-dark navbar-static-top">
+        <div class="container-fluid head-container">
+            <span class="navbar-brand mb-3 h1 head-title mx-3 nav-head" style="color: black;">Crop Prediction</span>
+            <ul>
+                <a class="head-item1" href="{{url_for('Landing')}}">Home</a>
+                    <a class="head-item1" href="{{url_for('About_Data')}}">Explore Data</a>
+                    <a class="head-item1" href="{{url_for('Form')}}">Predict Crop</a>
+                    <!-- <a class="head-item1" href="####">Features</a> -->
+                    <a class="head-item1" href="{{url_for('Contact')}}">Contact Us</a>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title" style="text-align: center;">Prediction</div>
+        <div class="content">
+            <form action="{{url_for('Predict')}}" method="post">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Nitrogen Soil</span>
+                        <input type="text" name="N_SOIL" placeholder="Enter Nitrogen Soil value" required />
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phosphorus Soil</span>
+                        <input type="text" name="P_SOIL" placeholder="Enter Phosphorus Soil value" required />
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Potassium Soil</span>
+                        <input type="text" name="K_SOIL" placeholder="Enter Potassium Soil value" required />
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Temperature</span>
+                        <input type="text" name="TEMPERATURE" placeholder="Enter Temperature" required />
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Humidity</span>
+                        <input type="text" name="HUMIDITY" placeholder="Enter Humidity" required />
+                    </div>
+                    <div class="input-box">
+                        <span class="details">PH</span>
+                        <input type="text" name="PH" placeholder="Enter PH Value" required />
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Rainfall</span>
+                        <input type="text" name="RAINFALL" placeholder="Enter Rainfall value" required />
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Crop Prive</span>
+                        <input type="text" name="CROP_PRICE" placeholder="Enter Crop" required />
+                    </div>
+                </div>
+
+                <!-- <h3>Your Result: </h3> -->
+                <h3>Your Result: {{prediction_text}}</h3>
+                <button class="button" type="submit">Predict</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

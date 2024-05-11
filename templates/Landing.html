@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Disease Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style/Landing.css') }}" />
+</head>
+
+<body>
+    <nav class="navbar navbara navbar-light navbar-static-top">
+        <div class="container-fluid head-container">
+            <span class="navbar-brand mb-3 h1 head-title mx-3 nav-head">Crop Prediction</span>
+            <ul>
+                <div class="nav-list">
+                    <a class="head-item1" href="{{url_for('Landing')}}">Home</a>
+                    <a class="head-item1" href="{{url_for('About_Data')}}">Explore Data</a>
+                    <a class="head-item1" href="{{url_for('Form')}}">Predict Crop</a>
+                    <!-- <a class="head-item1" href="####">Features</a> -->
+                    <a class="head-item1" href="{{url_for('Contact')}}">Contact Us</a>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid container-main d-flex">
+        <div class="center_c">
+            <br>
+            <br>
+            <br>
+            <div class="intro_left">
+                <h1 style="text-align: center; font-size: 120px;">Evolution in Prediction</h1>
+            </div>
+            <div class="intro_right">
+                <br>
+                Ever wondered about the bouquet of potential farm yields blooming in the palm of your hands? Well,
+                don’t
+                sweat the vectors, matrices and deep learning miracles. We bring you the Crop Prediction Machine -
+                making agri-predictions easier than sipping your morning coffee.
+
+            </div>
+        </div>
+
+        <img src="{{ url_for('static', filename='Images/Front.jpg') }}" alt="" class="img-fluid img-main" />
+    </div>
+
+    <!-- <div class="container-fluid main-content">
+        <div class="cards row p-2 mb-3 d-flex">
+
+            <div class="center_left">
+
+                <div class="intro_right">
+                    <h1 style="text-align: center; font-size: 100px;">Become a Farming Oracle</h1>
+                    <br>
+                    Unmask future crops with just a click! Unleash your inner agricultural genius by accurately
+                    predicting crop patterns using state-of-the-art machine learning tech.
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+</body>
+
+</html>
